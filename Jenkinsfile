@@ -15,7 +15,8 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/lakshmikundeti99/JenkinsDocK8sIntegration.git'
+         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/lakshmikundeti99/jenkinsDocK8sIntegration.git']])
+        
       }
     }
 
