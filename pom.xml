@@ -49,7 +49,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>jenkinsDocK8sIntegration</finalName>
+		<finalName>jenkins-Integration</finalName>
 	</build>
 
 </project>
