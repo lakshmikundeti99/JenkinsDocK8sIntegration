@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: JenkinsDocK8sIntegration
-          image: ldocker9/JenkinsDocK8sIntegration
+          image: ldocker9/jenkins-integration.jar
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
