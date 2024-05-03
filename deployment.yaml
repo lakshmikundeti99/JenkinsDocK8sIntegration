@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: JenkinsDocK8sIntegration-deploy
+  name: deploy
 spec:
   selector:
     matchLabels:
