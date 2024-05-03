@@ -2,7 +2,7 @@ FROM openjdk:8
 
 EXPOSE 8080
 
-ADD target/JenkinsDocK8sIntegration.jar JenkinsDocK8sIntegration.jar
+ADD target/jenkins-integration.jar jenkins-integration.jar
 
-ENTRYPOINT ["java","-jar","JenkinsDocK8sIntegration.jar"]
+ENTRYPOINT ["java","-jar","jenkins-integration.jar"]
 
