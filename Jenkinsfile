@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Build Maven'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/lakshmikundeti99/JenkinsDocK8sIntegration.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/lakshmikundeti99/jenkinsDocK8sIntegration.git']])
                 bat 'mvn clean install'
             }
         }
