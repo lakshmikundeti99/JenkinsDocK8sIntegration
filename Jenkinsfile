@@ -14,7 +14,7 @@ pipeline{
         stage("Build docker image"){
             steps{
                 script{
-                    bat "docker build -t ldocker9/jenkins-Integration.jar ."
+                    bat "docker build -t ldocker9/jenkins-integration.jar ."
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline{
                     withCredentials([string(credentialsId: 'pwd', variable: 'dockerpwd')]) {
                         bat "docker login -u ldocker9 -p ${dockerpwd}"
                     }
-                bat "docker push ldocker9/jenkins-Integration.jar"
+                bat "docker push ldocker9/jenkins-integration.jar"
                 }
             }
         }

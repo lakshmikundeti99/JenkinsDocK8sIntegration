@@ -49,7 +49,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>jenkins-Integration</finalName>
+		<finalName>jenkins-integration</finalName>
 	</build>
 
 </project>
