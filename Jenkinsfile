@@ -6,6 +6,10 @@ pipeline {
   }
 
   agent any
+  tools{
+		        maven 'LocalMaven'
+		    }
+  
 
   stages {
 
