@@ -44,8 +44,8 @@ pipeline {
 
     stage('Deploying SpringBoot container to Kubernetes') {
       steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
+        script {          
+          kubernetesDeploy( configs: "deployment.yaml", "service.yaml" ,  kubeconfigId: 'kubeconfig_pwd')
         }
       }
     }
