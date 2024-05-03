@@ -29,17 +29,16 @@ pipeline {
     }
 
     stage('Pushing Image') {
-      environment {
-               registryCredential = 'dockerpwd'
-           }
-      steps{
-        script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("latest")
-          }
-        }
-      }
-    }
+		            steps{
+		                script{
+		                    withCredentials([string(credentialsId: 'pwd', variable: 'dockerpwd')]) {
+		                        bat "docker login -u ldocker9 -p ${dockerpwd}"
+		                    }
+		                bat "docker push ldocker9/jenkins-integration.jar"
+		                }
+		            }
+		        }
+
     
     
 
